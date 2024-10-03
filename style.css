@@ -59,7 +59,10 @@ label, p {
   opacity: 0.2;
 }
 
-.videoView,
+/* General styles */
+.videoView {
+  width: 100%; /* Full width for better responsiveness */
+}
 .segmentOnClick {
   position: relative;
   float: left;
@@ -104,12 +107,17 @@ label, p {
   justify-content: center; /* Center the color buttons horizontally */
   align-items: center;     /* Center the color buttons vertically */
   margin: 20px 0;         /* Add some margin above and below */
+  flex-wrap: wrap;        /* Allow buttons to wrap to the next line on smaller screens */
 }
 
+/* Color button styles */
 .colorButton {
   cursor: pointer;         /* Add pointer cursor for interactivity */
-  margin: 0 20px;         /* Add space between buttons */
+  margin: 0 10px;         /* Space between buttons */
   transition: transform 0.2s; /* Add a little animation */
+  width: 40px;            /* Set a fixed width */
+  height: 40px;           /* Set a fixed height */
+  border-radius: 50%;     /* Make buttons circular */
 }
 .colorButton:hover {
   transform: scale(1.5);  /* Scale up on hover */
@@ -130,14 +138,21 @@ label, p {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Adjust webcam view for mobile */
-@media (max-width: 640px) {
-  #webcam {
-      width: 100%; /* Full width on small screens */
-      height: auto; /* Auto height */
-      transform: rotate(90deg); /* Rotate for vertical view */
-      transform-origin: left top; /* Set rotation origin to top left */
-      display: block; /* Ensure it displays as a block */
+/* Mobile styles */
+@media (max-width: 768px) {
+  .videoView {
+    height: auto;        /* Adjust height for better view */
+    display: flex;       /* Use flexbox for alignment */
+    justify-content: center; /* Center the webcam */
+    align-items: center; /* Center vertically */
+  }
+
+  .color-picker {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .colorButton {
+    margin: 5px 0;       /* Add margin for vertical spacing */
   }
 
   /* Additional styles to ensure the video appears correctly */
