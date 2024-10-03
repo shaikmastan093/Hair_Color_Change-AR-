@@ -27,14 +27,14 @@ label, p {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fafbfb;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 
 .App-link {
@@ -114,4 +114,38 @@ label, p {
 
 .colorButton:hover {
   transform: scale(1.1);  /* Scale up on hover */
+}
+#webcamButton {
+  background-color: #007f8b; /* Background color */
+  color: white; /* Text color */
+  font-size: 1.5em; /* Font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+#webcamButton:hover {
+  background-color: #005f6b; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Adjust webcam view for mobile */
+@media (max-width: 640px) {
+  #webcam {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Auto height */
+      transform: rotate(90deg); /* Rotate for vertical view */
+      transform-origin: left top; /* Set rotation origin to top left */
+      display: block; /* Ensure it displays as a block */
+  }
+
+  /* Additional styles to ensure the video appears correctly */
+  canvas {
+      width: 100%; /* Ensure canvas width is full */
+      height: auto; /* Auto height */
+      transform: rotate(90deg); /* Rotate canvas for vertical view */
+      transform-origin: left top; /* Set rotation origin to top left */
+  }
 }

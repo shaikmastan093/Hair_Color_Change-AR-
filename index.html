@@ -9,17 +9,15 @@
 <div class="App">
     <header class="App-header">
         <div id="testingInputs" style="position: fixed; top: 5px; right: 5px; width: 100px; z-index: 1000;">
-            <label>Color:</label>
-            <input style="width: 100px; height: 100px" type="color" id="color">
+            
+          
             <br>
-            <label>Blur:</label>
-            <input style="width: 50px; height: 25px" type="number" placeholder="1.01" step=".01" min="0" max="100" id="blur">
-            <label>Opacity:</label>
-            <input style="width: 50px; height: 25px" type="number" placeholder="1.01" step=".01" min="0" max="1" id="opacity">
+            
+            
         </div>
 
-        <h2>Test on Video</h2>
-        <p><b>Click on the button and enable camera access</b> to see its hair segmentation in real-time.</p>
+        <h2>Test on Hair</h2>
+        <h3><b>Click to enable camera for </b> real-time hair segmentation</h3>
         <br />
         <div class="webcam">
             <button id="webcamButton">
@@ -30,8 +28,7 @@
             <video id="webcam" width="640px" height="480px" playsinline="true" style="display: block;"></video>
         </div>
 
-        <h2>Tests on Images</h2>
-        <p><b>Click on an image below</b> to see its hair segmentation.</p>
+        
 
         <div class="flex-cont">
           <div class="color-picker">
@@ -48,7 +45,7 @@
             <video id="webcam" style="display: none;"></video>
             <canvas id="canvas1"></canvas>
             <canvas id="canvas2"></canvas>
-            <button id="webcamButton">ENABLE SEGMENTATION</button>
+            
         </div>
     </header>
 </div>
