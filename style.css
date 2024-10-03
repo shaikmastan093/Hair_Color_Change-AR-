@@ -102,25 +102,39 @@ label, p {
   justify-content: center;
   align-items: top;
 }
+/* Color picker container styles */
 .color-picker {
   display: flex;
-  justify-content: center; /* Center the color buttons horizontally */
-  align-items: center;     /* Center the color buttons vertically */
-  margin: 20px 0;         /* Add some margin above and below */
-  flex-wrap: wrap;        /* Allow buttons to wrap to the next line on smaller screens */
+  justify-content: center;      /* Center the color buttons horizontally */
+  align-items: center;          /* Center the color buttons vertically */
+  margin: 20px 0;              /* Add some margin above and below */
+  flex-wrap: wrap;             /* Allow buttons to wrap to the next line on smaller screens */
 }
 
 /* Color button styles */
 .colorButton {
-  cursor: pointer;         /* Add pointer cursor for interactivity */
-  margin: 0 10px;         /* Space between buttons */
-  transition: transform 0.2s; /* Add a little animation */
-  width: 40px;            /* Set a fixed width */
-  height: 40px;           /* Set a fixed height */
-  border-radius: 50%;     /* Make buttons circular */
+  cursor: pointer;              /* Add pointer cursor for interactivity */
+  margin: 0 10px;              /* Space between buttons */
+  transition: transform 0.2s;  /* Add a little animation */
+  width: 40px;                 /* Set a fixed width */
+  height: 40px;                /* Set a fixed height */
+  border-radius: 50%;          /* Make buttons circular */
 }
 .colorButton:hover {
   transform: scale(1.5);  /* Scale up on hover */
+}
+/* Container for the webcam */
+.video-container {
+  display: flex;                /* Enable flexbox */
+  justify-content: center;      /* Center horizontally */
+  align-items: center;          /* Center vertically */
+  margin: 20px 0;              /* Add some margin above and below */
+}
+/* Webcam styles */
+.videoView {
+  width: 100%;                  /* Full width for better responsiveness */
+  max-width: 400px;            /* Optional: limit max width for larger screens */
+  height: auto;                 /* Maintain aspect ratio */
 }
 #webcamButton {
   background-color: #007f8b; /* Background color */
@@ -140,20 +154,18 @@ label, p {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  .videoView {
-    height: auto;        /* Adjust height for better view */
-    display: flex;       /* Use flexbox for alignment */
-    justify-content: center; /* Center the webcam */
-    align-items: center; /* Center vertically */
+  .video-container {
+    flex-direction: column;     /* Stack webcam and buttons vertically on mobile */
   }
 
   .color-picker {
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column;     /* Stack buttons vertically */
   }
 
   .colorButton {
-    margin: 5px 0;       /* Add margin for vertical spacing */
+    margin: 5px 0;             /* Add margin for vertical spacing */
   }
+
 
   /* Additional styles to ensure the video appears correctly */
   canvas {
