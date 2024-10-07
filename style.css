@@ -136,7 +136,10 @@ label, p {
 .videoView {
   width: 100%;                  /* Full width for better responsiveness */
   max-width: 400px;            /* Optional: limit max width for larger screens */
-  height: auto;                 /* Maintain aspect ratio */
+  height: auto;  
+  position: relative;
+  left: -50px;
+                 
 }
 #webcamButton {
   background-color: #007f8b; /* Background color */
