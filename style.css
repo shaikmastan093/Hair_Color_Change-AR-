@@ -126,10 +126,11 @@ label, p {
 /* Container for the webcam */
 .video-container {
   display: flex;                /* Enable flexbox */
-  justify-content: center;      /* Center horizontally */
+  justify-content: flex-start;      /* Center horizontally */
   align-items: center;          /* Center vertically */
   margin: 20px 0;
-               /* Add some margin above and below */
+  margin-left: -20px; 
+              
 }
 /* Webcam styles */
 .videoView {
