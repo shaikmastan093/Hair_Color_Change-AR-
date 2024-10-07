@@ -24,6 +24,15 @@
             text-align: center;
         }  */
 
+        .webCamParent{
+            width: 100%;
+            /* background-color: lightblue; */
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
          .webcam {
             position: relative;
             margin: 20px 0;
@@ -107,10 +116,12 @@
         <h2>Test on Hair</h2>
         <h3><b>Click to enable camera for </b> real-time hair segmentation</h3>
         <br />
-        <div class="webcam">
-            <canvas id="canvas1" width="640px" height="480px" style="display: none; position: relative; z-index: 100; opacity: .5; filter: blur(1px)"></canvas>
-            <canvas id="canvas2" width="640px" height="480px" style="display: none; position: absolute; margin-top: -480px; z-index: 0"></canvas>
-            <video id="webcam" width="640px" height="480px" playsinline="true" style="display: block;"></video>
+        <div class="webCamParent">
+            <div class="webcam">
+                <canvas id="canvas1" width="640px" height="480px" style="display: none; position: relative; z-index: 100; opacity: .5; filter: blur(1px)"></canvas>
+                <canvas id="canvas2" width="640px" height="480px" style="display: none; position: absolute; margin-top: -480px; z-index: 0"></canvas>
+                <video id="webcam" width="640px" height="480px" playsinline="true" style="display: block;"></video>
+            </div>
         </div>
 
         <div class="flex-cont" style="display: flex; flex-direction: column; align-items: center;">
