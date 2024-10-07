@@ -128,7 +128,8 @@ label, p {
   display: flex;                /* Enable flexbox */
   justify-content: center;      /* Center horizontally */
   align-items: center;          /* Center vertically */
-  margin: 20px 0;              /* Add some margin above and below */
+  margin: 20px 0;
+               /* Add some margin above and below */
 }
 /* Webcam styles */
 .videoView {
@@ -172,6 +173,6 @@ label, p {
       width: 100%; /* Ensure canvas width is full */
       height: auto; /* Auto height */
       transform: rotate(90deg); /* Rotate canvas for vertical view */
-      transform-origin: left top; /* Set rotation origin to top left */
+      transform-origin: center top; /* Set rotation origin to top left */
   }
 }
