@@ -88,10 +88,10 @@ function init() {
         }
         if (webcamRunning === true) {
             webcamRunning = false;
-            enableWebcamButton.innerText = "ENABLE SEGMENTATION";
+            enableWebcamButton.innerText = "ENABLE CAMERA";
         } else {
             webcamRunning = true;
-            enableWebcamButton.innerText = "DISABLE SEGMENTATION";
+            enableWebcamButton.innerText = "CAPTURE THE SELFIE";
         }
 
         const constraints = {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hair Segmentation Task for Web</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Add this CSS for button alignment */
+        #webcamButton {
+            display: flex; /* Use flexbox to align items */
+            justify-content: center; /* Center the button horizontally */
+            align-items: center; /* Center the button vertically */
+            margin: 10px; /* Optional margin for spacing */
+        }
+    </style>
+</head>
+<body>
+<div class="App">
+    <header class="App-header">
+        <div id="testingInputs" style="position: fixed; top: 5px; right: 5px; width: 100px; z-index: 1000;">
+            
+          
+            <br>
+            
+        </div>
+
+        <h2>Test on Hair</h2>
+        <h3><b>Click to enable camera for </b> real-time hair segmentation</h3>
+        <br />
+        <div class="webcam">
+            <canvas id="canvas1" width="640px" height="480px" style="display: none; position: relative; z-index: 100; opacity: .5; filter: blur(1px)"></canvas>
+            <canvas id="canvas2" width="640px" height="480px" style="display: none; position: absolute; margin-top: -480px; z-index: 0"></canvas>
+            <video id="webcam" width="640px" height="480px" playsinline="true" style="display: block;"></video>
+        </div>
+
+        <div class="flex-cont" style="display: flex; flex-direction: column; align-items: center;">
+          <div class="color-picker" style="display: flex; justify-content: center; margin-bottom: 10px;">
+              <div class="colorButton" style="background-color: #FF0000; border-radius: 50%; width: 50px; height: 50px;"></div>
+              <div class="colorButton" style="background-color: #00FF00; border-radius: 50%; width: 50px; height: 50px;"></div>
+              <div class="colorButton" style="background-color: #0000FF; border-radius: 50%; width: 50px; height: 50px;"></div>
+              <div class="colorButton" style="background-color: #FFFF00; border-radius: 50%; width: 50px; height: 50px;"></div>
+              <div class="colorButton" style="background-color: #FF00FF; border-radius: 50%; width: 50px; height: 50px;"></div>
+              <div class="colorButton" style="background-color: #00FFFF; border-radius: 50%; width: 50px; height: 50px;"></div>
+          </div>
+          <button id="webcamButton">ENABLE WEBCAM</button>
+      </div>
+      
+        <video id="webcam" style="display: none;"></video>
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
+    </header>
+</div>
+<!-- partial -->
+<script type="module" crossorigin="anonymous" src="./script.js"></script>
+</body>
+</html>
