@@ -6,18 +6,47 @@
     <link rel="stylesheet" href="./style.css">
     <style>
         /* Add this CSS for button alignment */
-        #webcamButton {
-            display: flex; /* Use flexbox to align items */
-            justify-content: center; /* Center the button horizontally */
-            align-items: center; /* Center the button vertically */
-            margin: 10px; /* Optional margin for spacing */
-        }
+        /* body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        } */
+        /* .App {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 700px;
+            text-align: center;
+        }  */
 
-           .color-picker {
+         .webcam {
+            position: relative;
+            margin: 20px 0;
+        } 
+
+        /* video, canvas {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }  */
+        .flex-cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0;
+        }
+          .color-picker {
             display: flex;
             justify-content: center;
             margin: 10px 0;
-        }
+        } 
 
         .colorButton {
             border-radius: 50%;
@@ -29,6 +58,38 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s;
         }
+        
+        .colorButton:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+         #webcamButton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: background-color 0.3s;
+        }
+
+
+
+
+         #webcamButton {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 10px; 
+        } 
+        #webcamButton:hover {
+            background-color: #0056b3;
+        }
+
+       
+
+        
     </style>
 </head>
 <body>
